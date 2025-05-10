@@ -15,11 +15,12 @@ runs:
       run: |
         env=UiPath.CLI
         case "$OSTYPE" in
-        msys*)    env=UiPath.Windows.CLI ;;
-        cygwin*)  env=UiPath.Windows.CLI ;;
-        *)        env=UiPath.CLI ;;
+          msys*)    env=UiPath.Windows.CLI ;;
+          cygwin*)  env=UiPath.Windows.CLI ;;
+          *)        env=UiPath.CLI ;;
         esac
         echo $env
+        curl --output uipcli.zip "https://pkgs.dev.azure.com/uipath/Public.Feeds/_apis/packaging/feeds/UiPath-Official/nuget/packages/$env/versions/25.4.9239.19674/content"
     - name: Run curl
       shell: bash
       run: curl https://www.keycdn.com
