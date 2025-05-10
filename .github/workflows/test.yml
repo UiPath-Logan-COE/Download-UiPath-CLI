@@ -7,8 +7,10 @@ on:
             ["main"]
 
 jobs:
-    test:
+    clone:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
-            - uses: action.yml
+    test:
+        needs: clone
+        uses: ./action.yml
