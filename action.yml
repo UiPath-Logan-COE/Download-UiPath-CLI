@@ -19,7 +19,7 @@ runs:
         cygwin*)  env=UiPath.Windows.CLI ;;
         *)        env=UiPath.CLI ;;
         esac
-        echo env
+        echo $env
     - name: Run curl
       shell: bash
       run: curl https://www.keycdn.com
