@@ -11,6 +11,8 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
-    test:
-        needs: clone
-        uses: ./action.yml
+
+            - name: 'Download UiPath CLI'
+              uses: ./
+              with:
+                version: 25.1
