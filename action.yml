@@ -1,1 +1,18 @@
+name: Download UiPath CLI
+description: 'Setup step that downloads the UiPath CLI'
 
+inputs:
+  version:
+    required: false
+    description: The version of the UiPath CLI that you want to download
+    default: '25.1'
+
+runs:
+  using: "composite"
+  steps:
+    - name: Downalod UiPath CLI
+      shell: bash
+      run: |
+        echo "test"
+        echo ${{github.inputs.version}}
+        curl https://www.keycdn.com
