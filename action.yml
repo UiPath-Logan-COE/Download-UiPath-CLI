@@ -13,7 +13,13 @@ runs:
     - name: Downalod UiPath CLI
       shell: bash
       run: |
-        echo $OSTYPE
+        env=UiPath.CLI
+        case "$OSTYPE" in
+        msys*)    env=UiPath.Windows.CLI ;;
+        cygwin*)  env=UiPath.Windows.CLI ;;
+        *)        env=UiPath.CLI ;;
+        esac
+        echo env
     - name: Run curl
       shell: bash
       run: curl https://www.keycdn.com
