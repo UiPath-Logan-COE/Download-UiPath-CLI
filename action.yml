@@ -13,7 +13,7 @@ runs:
     - name: Downalod UiPath CLI
       shell: bash
       run: |
-        echo $OSTYPE
         echo $(uname)
-        echo ${{ toJSON(github) }}
-        curl https://www.keycdn.com
+    - name: Run curl
+      shell: bash
+      run: curl https://www.keycdn.com
