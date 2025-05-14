@@ -8,6 +8,8 @@ This GitHub Action downloads the specified version of the UiPath Command Line In
 
 The UiPath CLI is distributed as a `.nupkg` package from the official UiPath artifacts feed. This action fetches the specified version, extracts it, and adds it to the system path for use in later workflow steps.
 
+
+
 ## 🚀 Usage
 
 ```yaml
@@ -28,3 +30,21 @@ jobs:
 
       - name: Run UiPath CLI
         run: uipcli help
+```
+
+## 🔧 Inputs
+
+| Name     | Description                                   | Required | Default |
+|----------|-----------------------------------------------|----------|---------|
+| `version` | The version of the UiPath CLI to download.    | ✅ Yes   | N/A     |
+
+**Note:** Available versions can be found at the [UiPath Artifact Feed](https://uipath.visualstudio.com/Public.Feeds/_artifacts/feed/UiPath-Official) by filtering on **UiPath.CLI**.
+
+
+---
+
+## 👤 Author
+
+**Maintainer:** [Logan Anderson](https://www.linkedin.com/in/logan-anderson-761341165/)
+
+For feedback, questions, or contributions, please open an issue or submit a pull request on the [GitHub repository](https://github.com/UiPath-Logan-COE/Download-UiPath-CLI).
