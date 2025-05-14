@@ -1,10 +1,7 @@
 # yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
-name: Testing workflow
+name: Test Download UiPath CLI
 
-on:
-    push:
-        branches:
-            ["main"]
+on: [push]
 
 jobs:
     clone:
