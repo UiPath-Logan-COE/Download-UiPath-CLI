@@ -1,5 +1,5 @@
 name: Download UiPath CLI
-description: 'Setup step that downloads the UiPath CLI'
+description: 'Setup step that downloads the UiPath CLI into the current workspace'
 
 inputs:
   version:
@@ -20,9 +20,6 @@ runs:
           cygwin*)  env=UiPath.CLI.Windows ;;
           *)        env=UiPath.CLI ;;
         esac
-
-        echo $env
-        echo ${{ inputs.version }}
 
         curl "https://pkgs.dev.azure.com/uipath/Public.Feeds/_apis/packaging/feeds/UiPath-Official/nuget/packages/$env/versions/${{ inputs.version }}/content" -L -o uipcli.zip
         mkdir uipcli
