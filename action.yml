@@ -5,7 +5,7 @@ inputs:
   version:
     required: false
     description: The version of the UiPath CLI that you want to download
-    default: '25.1'
+    default: '25.4.9239.19674'
 
 runs:
   using: "composite"
@@ -22,7 +22,8 @@ runs:
         esac
 
         echo $env
+        echo ${{ inputs.version }}
 
-        curl "https://pkgs.dev.azure.com/uipath/Public.Feeds/_apis/packaging/feeds/UiPath-Official/nuget/packages/$env/versions/25.4.9239.19674/content" -L -o uipcli.zip
+        curl "https://pkgs.dev.azure.com/uipath/Public.Feeds/_apis/packaging/feeds/UiPath-Official/nuget/packages/$env/versions/${{ inputs.version }}/content" -L -o uipcli.zip
         mkdir uipcli
         unzip -o "uipcli" -d uipcli
