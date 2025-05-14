@@ -1,4 +1,6 @@
 # Download UiPath CLI
+## Authors
+- [Logan Anderson](https://www.linkedin.com/in/logan-anderson-761341165/)
 
 This GitHub Action downloads the specified version of the UiPath Command Line Interface (CLI), making it available for subsequent steps in your workflow. The CLI can be used to analyze or push UiPath projects as part of your CI/CD pipeline.
 
