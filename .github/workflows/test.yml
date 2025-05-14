@@ -15,4 +15,4 @@ jobs:
             - name: 'Download UiPath CLI'
               uses: ./
               with:
-                version: 25.1
+                version: 25.4.9239.19674
